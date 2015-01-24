@@ -1,0 +1,17 @@
+
+<div ng-controller="MainCtrl">
+  <dl class="dl-horizontal">
+    <dt ng-repeat-start="quote in quotes">
+    <a href="{{quote.url}}" target="_blank">{{quote.Name}}</a>
+    <p class="text-muted">
+      {{quote.Symbol}}
+    </p>
+    </dt>
+    <dd ng-repeat-end>
+      <h5 class="{{quote.css}}">
+        {{quote.Ask}} <small>{{quote.Currency}}</small> / {{quote.Bid}} <small>{{quote.Currency}}</small>
+        <p>{{quote.ChangeinPercent}}</p>
+      </h5>
+    </dd>
+  </dl>
+</div>
